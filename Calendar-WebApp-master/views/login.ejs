@@ -1,0 +1,16 @@
+<%- include("partials/header", { stylesheet: "main.css" }) %>
+
+<div class="login-container">
+    <p><a href="/">Home</a> > Login</p>
+    <h1>Login</h1>
+    <form action="/login" method="POST">
+        <label>Username</label>
+        <input type="text" name="username" placeholder="Username">
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Password">
+        <button>Login</button>
+    </form>
+    <p><a href="/register">I don't have a account</a></p>
+</div>
+
+<%- include("partials/footer") %>
