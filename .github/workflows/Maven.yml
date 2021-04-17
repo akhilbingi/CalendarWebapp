@@ -21,8 +21,7 @@ jobs:
       with:
         java-version: '8'
         distribution: 'adopt'
-    - name: Setup Node.js environment
-      uses: actions/setup-node@v2.1.5
+    
    
     
   
@@ -43,10 +42,5 @@ jobs:
           export DISPLAY=:99
           chromedriver --url-base=/wd/hub &
           sudo Xvfb -ac :99 -screen 0 1280x1024x24 > /dev/null 2>&1 & # optional
-    - name: work with current directory
-      working-directory: ./Calendar-WebApp-master
-      run: |
-         npm i
-         node app.js
     - name: Build with Maven
       run: mvn -B test --file pom.xml
